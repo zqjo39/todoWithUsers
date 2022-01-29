@@ -11,7 +11,7 @@ module.exports.listAll = async function (req, res, next) {
         let completeItems = todos.filter(item => item.complete);
         let incompleteItems = todos.filter(item => !item.complete);
 
-        res.render('all_todos', {
+        res.render('todos/viewAll', {
             completeItems,
             incompleteItems
         });
@@ -25,7 +25,13 @@ module.exports.listAll = async function (req, res, next) {
 
 
 module.exports.displayAddItem = (req, res) => {
-    res.render('newItem')
+    const item = {
+        name: '',
+        description: '',
+    }
+    res.render('todos/newItem', {
+        item
+    })
 };
 
 module.exports.addNewItem = async (req, res) => {
@@ -45,7 +51,7 @@ module.exports.viewEditItem = async (req, res) => {
 
     try {
         const todo = await Todo.findByPk(req.params.id);
-        res.render('editItem', {item: todo})
+        res.render('todos/editItem', {item: todo})
 
     } catch (err) {
         console.log('There was an error');

@@ -1,0 +1,5 @@
+extends ../layout
+
+block content
+  include ../mixins/todoForm
+  +todoForm(item, `/item/edit/${item.id}`,'/')

@@ -1,0 +1,7 @@
+mixin todoForm(item, saveUrl, cancelUrl)
+  form(action=saveUrl method="post")
+    div.mb-3
+      label.form-label(for="description") Item Description
+      input.form-control(type="text" name="description" id="description" value=`${item.description}`)
+    a(href=cancelUrl) Cancel
+    button.btn.btn-success(type="Submit") Save
