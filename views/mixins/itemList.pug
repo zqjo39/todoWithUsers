@@ -1,0 +1,22 @@
+mixin itemList(header, list)
+  h1=header
+  table.table
+    thead
+      tr
+        th Description
+        th Status
+        th Actions
+    tbody
+        each item in list
+          tr
+            td= item.description
+            td
+              div(class=['badge', item.complete ? 'bg-success' : 'bg-primary'])= item.completeText
+            td
+              div.actions
+              a(href=`/item/delete/${item.id}` class="btn btn-danger" ) Delete
+              a(href=`item/edit/${item.id}`) Edit
+              if item.complete
+                a(href=`/item/incomplete/${item.id}`) Mark as Incomplete
+              else
+                a(href=`/item/complete/${item.id}`) Mark as Complete
