@@ -2,4 +2,6 @@ extends ../layout
 
 block content
   include ../mixins/todoForm
-  +todoForm(item, `/item/edit/${item.id}`,'/')
+  div.content
+    h3.form-header Update Item
+    +todoForm(item, `/item/edit/${item.id}`,'/')

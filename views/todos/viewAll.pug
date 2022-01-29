@@ -3,16 +3,18 @@ extends ../layout
 include ../mixins/itemList
 
 block content
-  div
+  div.content
     section
-      header All Todos
-      p #{moment().format('MMMM Do YYYY, h:mm:ss a')}
-    +itemList('Incomplete Items',incompleteItems)
-
-    div
-        a(href="/item/add") Add New Item
+      header.page-header All Todos
+      p.time #{moment().format('MMMM Do YYYY, h:mm:ss a')}
 
     div.section-list
+      +itemList('Incomplete Items',incompleteItems)
+
+    div.button-row
+      a.button.primary(href="/item/add") Add New Item
+
+    div.section-list.completed
       +itemList('Completed Items', completeItems)
 
 
