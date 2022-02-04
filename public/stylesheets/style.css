@@ -1,0 +1,209 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+html{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #312E81;
+  display: inline-block;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.content{
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.page-header{
+  font-size: 20px;
+  color: #3F3F46;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.time{
+  color: #71717A;
+  font-size: 12px;
+}
+
+/*all todo items styles*/
+.section-list{
+  margin: 32px 0;
+}
+
+.list-header{
+  font-size: 16px;
+  color: #52525B;
+  margin-bottom: 16px;
+}
+.table-container{
+  overflow: hidden;
+  border-radius: 16px;
+  max-width: 800px;
+  border: 1px solid #D4D4D8;
+  margin-bottom: 16px;
+}
+
+table.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead{
+  background: #F4F4F5;
+}
+
+.table th, .table td{
+  padding: 12px 25px;
+}
+
+.table th{
+  color: #52525B;
+
+}
+
+.table td{
+  color: #27272A;
+  font-size: 16px;
+}
+
+
+.completed .table td{
+  color: #A1A1AA;
+}
+
+.table td a{
+  font-size: 14px;
+}
+
+.table tr:nth-child(2n){
+  background: #F4F4F5;
+}
+
+.actions{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-left{
+  text-align: left;
+}
+
+.align-right{
+  text-align: right;
+}
+
+
+/*form styling*/
+
+.button-row{
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #D4D4D8;
+}
+.button{
+  padding: 8px 16px;
+  border: 1px solid #A1A1AA;
+  color: #52525B;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.button.primary{
+  background: #312E81;
+  color: white;
+  border-color: #312E81;
+}
+
+label {
+  display: block;
+  color: #3F3F46;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input{
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+}
+
+.form-button-row{
+  padding-top: 16px;
+  margin-top: 16px;
+
+  border-top: 1px solid #D4D4D8;
+}
+
+.form-header{
+  font-size: 16px;
+  color: #52525B;
+  margin-bottom: 16px;
+}
+
+.input-form-row{
+  display: flex;
+}
+.input-container{
+  margin-bottom: 16px;
+}
+.input-container.wide input{
+  width: 325px;
+}
+
+.input-form-row .input-container{
+  margin-right: 16px;
+}
+
+.helper-text{
+  font-size: 12px;
+  color: #71717A;
+  margin-top: 4px
+}
+
+/*nav style*/
+
+
+nav{
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 50px;
+  background: #F4F4F5;
+
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+nav li{
+  padding: 20px 20px;
+}
+
+nav .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h3{
+  color: #312E81;
+  font-size: 20px;
+}
