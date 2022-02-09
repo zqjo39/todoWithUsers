@@ -1,7 +1,7 @@
 const { Todo } = require('../models');
 
 
-module.exports.listAll = async function(req, res, next) {
+module.exports.listAll = async function(req, res) {
     const todos = await Todo.findAll();
 
     let completeItems = todos.filter(item => item.complete);
