@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const todoController = require('../controllers/todoController');
-
+const userController = require('../controllers/userController');
 
 
 
@@ -19,6 +19,11 @@ router.post('/item/edit/:id',  todoController.saveEditItem);
 router.get('/item/delete/:id',  todoController.deleteItem);
 router.get('/item/complete/:id',  todoController.makeItemComplete);
 router.get('/item/incomplete/:id',  todoController.markItemIncomplete);
+
+router.get('/register', userController.renderRegistration);
+router.post('/register', userController.register);
+
+router.get('/login', userController.renderLogin);
 
 
 module.exports = router;
