@@ -3,7 +3,7 @@ const {Strategy} = require('passport-local');
 const {User} = require('../models');
 const md5 = require('md5');
 
-async function authenicate(username, password, done) {
+async function authenticate(username, password, done) {
     // fetch user from database
     const user = await User.findOne({
         where: {
@@ -26,7 +26,7 @@ const validationStrategy = new Strategy({
     usernameField: 'email',
     passwordField: 'password'
     },
-    authenicate);
+    authenticate);
 
 passport.use(validationStrategy);
 
