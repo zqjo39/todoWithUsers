@@ -23,8 +23,8 @@ async function authenticate(username, password, done) {
 }
 
 const validationStrategy = new Strategy({
-    usernameField: 'email',
-    passwordField: 'password'
+        usernameField: 'email',
+        passwordField: 'password',
     },
     authenticate);
 
